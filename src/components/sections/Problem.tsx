@@ -67,17 +67,17 @@ export function Problem() {
                                             {/* Banners */}
                                             <div className="col-span-3 h-[40%] flex gap-1">
                                                 <div className="flex-1 relative rounded-lg overflow-hidden h-full">
-                                                    <img src="/image/banner1.jpg" alt="Banner 1" className="object-cover w-full h-full" />
+                                                    <img src="/images/banner1.jpg" alt="Banner 1" className="object-cover w-full h-full" />
                                                 </div>
                                                 <div className="flex-1 relative rounded-lg overflow-hidden h-full">
-                                                    <img src="/image/banner2.jpg" alt="Banner 2" className="object-cover w-full h-full" />
+                                                    <img src="/images/banner2.jpg" alt="Banner 2" className="object-cover w-full h-full" />
                                                 </div>
                                             </div>
                                             {/* Apps */}
                                             <div className="col-span-3 h-[60%] grid grid-cols-4 gap-1">
                                                 {['app1.png', 'app2.png', 'app3.png', 'app4.png', 'app5.png', 'app6.png', 'app7.png'].map((app, i) => (
                                                     <div key={i} className={`relative rounded-lg overflow-hidden bg-white ${i === 6 ? 'col-span-2' : ''}`}>
-                                                        <img src={`/image/${app}`} alt={`App ${i + 1}`} className="object-cover w-full h-full" />
+                                                        <img src={`/images/${app}`} alt={`App ${i + 1}`} className="object-cover w-full h-full" />
                                                     </div>
                                                 ))}
                                             </div>

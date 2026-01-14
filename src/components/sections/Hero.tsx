@@ -11,12 +11,12 @@ export function Hero() {
             {/* Background with Parallax */}
             <ParallaxBackground
                 images={[
-                    '/image/1.png',
-                    '/image/2.png',
-                    '/image/3.png',
-                    '/image/4.png',
-                    '/image/5.png',
-                    '/image/6.png'
+                    '/images/1.png',
+                    '/images/2.png',
+                    '/images/3.png',
+                    '/images/4.png',
+                    '/images/5.png',
+                    '/images/6.png'
                 ]}
                 className="absolute inset-0"
             >
