@@ -6,7 +6,8 @@ import { Badge } from '@/components/ui/Badge';
 
 interface BeforeAfterProps {
     beforeImage: string;
-    afterImage: string;
+    afterImage?: string;
+    afterComponent?: React.ReactNode;
     beforeLabel?: string;
     afterLabel?: string;
     className?: string;
@@ -15,6 +16,7 @@ interface BeforeAfterProps {
 export function BeforeAfter({
     beforeImage,
     afterImage,
+    afterComponent,
     beforeLabel = "Before",
     afterLabel = "After",
     className
@@ -75,13 +77,22 @@ export function BeforeAfter({
             onTouchMove={(e) => handleMove(e)}
         >
             {/* After Image (Background) - The "Outcome" */}
-            <Image
-                src={afterImage}
-                alt="After"
-                fill
-                className="object-cover"
-                priority
-            />
+            {/* After Image (Background) - The "Outcome" */}
+            {afterComponent ? (
+                <div className="absolute inset-0 w-full h-full bg-gray-50">
+                    {afterComponent}
+                </div>
+            ) : (
+                afterImage && (
+                    <Image
+                        src={afterImage}
+                        alt="After"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                )
+            )}
             {afterLabel && (
                 <Badge variant="accent" className="absolute top-4 right-4 z-10 pointer-events-none">
                     {afterLabel}

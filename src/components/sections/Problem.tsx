@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 export function Problem() {
     return (
-        <section className="py-24 bg-white px-4 md:px-8">
-            <div className="mx-auto max-w-7xl">
+        <section className="py-24 bg-white px-4 md:px-8 overflow-hidden">
+            <div className="mx-auto max-w-[1400px]">
                 <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center">
 
                     {/* Left Content */}
@@ -52,15 +52,40 @@ export function Problem() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
+                        className="w-full"
                     >
-                        <BeforeAfter
-                            // Using generic food placeholders for demonstration
-                            beforeImage="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop"
-                            afterImage="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1000&auto=format&fit=crop"
-                            beforeLabel="Before: 흔한 메뉴판"
-                            afterLabel="After: 위즈더플래닝"
-                            className="shadow-2xl"
-                        />
+                        {/* Enlarged Container */}
+                        <div className="w-full aspect-[4/3] md:aspect-video lg:aspect-[16/10] relative rounded-2xl overflow-hidden shadow-2xl">
+                            <BeforeAfter
+                                beforeImage="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop" // Unappealing menu placeholder
+                                beforeLabel="Before: 흔한 메뉴판"
+                                afterLabel="After: 위즈더플래닝"
+                                className="h-full w-full"
+                                afterComponent={
+                                    <div className="w-full h-full bg-[#f0f0f0] overflow-hidden">
+                                        <div className="grid grid-cols-3 gap-1 p-2 h-full w-full opacity-90 scale-105">
+                                            {/* Banners */}
+                                            <div className="col-span-3 h-[40%] flex gap-1">
+                                                <div className="flex-1 relative rounded-lg overflow-hidden h-full">
+                                                    <img src="/image/banner1.jpg" alt="Banner 1" className="object-cover w-full h-full" />
+                                                </div>
+                                                <div className="flex-1 relative rounded-lg overflow-hidden h-full">
+                                                    <img src="/image/banner2.jpg" alt="Banner 2" className="object-cover w-full h-full" />
+                                                </div>
+                                            </div>
+                                            {/* Apps */}
+                                            <div className="col-span-3 h-[60%] grid grid-cols-4 gap-1">
+                                                {['app1.png', 'app2.png', 'app3.png', 'app4.png', 'app5.png', 'app6.png', 'app7.png'].map((app, i) => (
+                                                    <div key={i} className={`relative rounded-lg overflow-hidden bg-white ${i === 6 ? 'col-span-2' : ''}`}>
+                                                        <img src={`/image/${app}`} alt={`App ${i + 1}`} className="object-cover w-full h-full" />
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            />
+                        </div>
                         <p className="mt-4 text-center text-sm text-gray-400">
                             👆 슬라이더를 좌우로 움직여 차이를 확인해보세요
                         </p>
