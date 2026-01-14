@@ -1,6 +1,7 @@
 import { Card } from '@/components/ui/Card';
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
+import { CountUp } from '@/components/ui/motion/CountUp';
 
 export function Evidence() {
     return (
@@ -61,7 +62,9 @@ export function Evidence() {
                         <Card className="h-full relative overflow-hidden">
                             <div className="flex items-center justify-between mb-6">
                                 <div className="font-bold text-gray-400 text-sm">배민 사장님 광장</div>
-                                <div className="text-green-500 font-bold bg-green-50 px-2 py-1 rounded text-xs">+124% 상승</div>
+                                <div className="text-green-500 font-bold bg-green-50 px-2 py-1 rounded text-xs">
+                                    +<CountUp to={124} />% 상승
+                                </div>
                             </div>
 
                             {/* CSS Graph */}

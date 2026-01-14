@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, CheckCircle2 } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
+import { TiltCard } from '@/components/ui/motion/TiltCard';
 
 export function Upsell() {
     return (
@@ -28,38 +29,44 @@ export function Upsell() {
                     <div className="md:hidden absolute left-8 top-10 bottom-10 w-0.5 bg-white/20"></div>
 
                     <motion.div
-                        className="relative flex flex-col items-center bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-sm"
+                        className="relative bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm"
                         whileHover={{ y: -5 }}
                     >
-                        <div className="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center text-xl font-bold mb-4 border border-white/20">1</div>
-                        <h4 className="font-bold text-lg mb-2">단건 상품 이용</h4>
-                        <p className="text-gray-400 text-center text-sm">최적화/컨설팅<br />19.9만원 결제</p>
-                        <div className="absolute -bottom-6 md:bottom-auto md:-right-6 text-white/50 z-10 rotate-90 md:rotate-0">
-                            <ArrowDown size={24} />
-                        </div>
+                        <TiltCard className="flex flex-col items-center p-6 h-full">
+                            <div className="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center text-xl font-bold mb-4 border border-white/20">1</div>
+                            <h4 className="font-bold text-lg mb-2">단건 상품 이용</h4>
+                            <p className="text-gray-400 text-center text-sm">최적화/컨설팅<br />19.9만원 결제</p>
+                            <div className="absolute -bottom-6 md:bottom-auto md:-right-6 text-white/50 z-10 rotate-90 md:rotate-0">
+                                <ArrowDown size={24} />
+                            </div>
+                        </TiltCard>
                     </motion.div>
 
                     <motion.div
-                        className="relative flex flex-col items-center bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-sm"
+                        className="relative bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm"
                         whileHover={{ y: -5 }}
                         transition={{ delay: 0.1 }}
                     >
-                        <div className="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center text-xl font-bold mb-4 border border-white/20">2</div>
-                        <h4 className="font-bold text-lg mb-2">만족 후 전환</h4>
-                        <p className="text-gray-400 text-center text-sm">1개월 내<br />통합 관리 계약</p>
-                        <div className="absolute -bottom-6 md:bottom-auto md:-right-6 text-white/50 z-10 rotate-90 md:rotate-0">
-                            <ArrowDown size={24} />
-                        </div>
+                        <TiltCard className="flex flex-col items-center p-6 h-full">
+                            <div className="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center text-xl font-bold mb-4 border border-white/20">2</div>
+                            <h4 className="font-bold text-lg mb-2">만족 후 전환</h4>
+                            <p className="text-gray-400 text-center text-sm">1개월 내<br />통합 관리 계약</p>
+                            <div className="absolute -bottom-6 md:bottom-auto md:-right-6 text-white/50 z-10 rotate-90 md:rotate-0">
+                                <ArrowDown size={24} />
+                            </div>
+                        </TiltCard>
                     </motion.div>
 
                     <motion.div
-                        className="relative flex flex-col items-center bg-vivid-orange rounded-2xl p-6 shadow-2xl border border-vivid-orange"
+                        className="relative bg-vivid-orange rounded-2xl shadow-2xl border border-vivid-orange"
                         whileHover={{ scale: 1.05 }}
                         transition={{ delay: 0.2 }}
                     >
-                        <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center text-xl font-bold mb-4 text-vivid-orange">3</div>
-                        <h4 className="font-bold text-lg mb-2">100% 환급 혜택</h4>
-                        <p className="text-white/90 text-center text-sm font-semibold">첫 달 결제 금액<br />199,000원 즉시 차감</p>
+                        <TiltCard className="flex flex-col items-center p-6 h-full">
+                            <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center text-xl font-bold mb-4 text-vivid-orange">3</div>
+                            <h4 className="font-bold text-lg mb-2">100% 환급 혜택</h4>
+                            <p className="text-white/90 text-center text-sm font-semibold">첫 달 결제 금액<br />199,000원 즉시 차감</p>
+                        </TiltCard>
                     </motion.div>
                 </div>
 
