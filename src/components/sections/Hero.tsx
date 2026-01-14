@@ -8,8 +8,16 @@ export function Hero() {
     return (
         <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-black">
             {/* Background with Parallax */}
+            {/* Background with Parallax */}
             <ParallaxBackground
-                image="https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=2070&auto=format&fit=crop"
+                images={[
+                    '/image/1.png',
+                    '/image/2.png',
+                    '/image/3.png',
+                    '/image/4.png',
+                    '/image/5.png',
+                    '/image/6.png'
+                ]}
                 className="absolute inset-0"
             >
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-deep-navy/90"></div>
