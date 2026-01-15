@@ -28,17 +28,6 @@ export function ServiceDetail() {
         }
     ];
 
-    const itemImages = [
-        "/images/app1.png", "/images/app2.png", "/images/app3.png", "/images/app4.png",
-        "/images/app5.png", "/images/app6.png", "/images/app7.png",
-        "/images/banner1.jpg", "/images/banner2.jpg"
-    ];
-
-    const bannerImages = [
-        "/images/banner1.jpg",
-        "/images/banner2.jpg"
-    ];
-
     return (
         <section className="py-24 bg-white px-4">
             <div className="mx-auto max-w-5xl">
@@ -91,11 +80,16 @@ export function ServiceDetail() {
                                                 }}
                                                 style={{ width: "max-content" }}
                                             >
-                                                {[...itemImages, ...itemImages, ...itemImages, ...itemImages].map((src, i) => (
+                                                {/* App Optimization Images: 1, 2, 3, 6 */}
+                                                {[
+                                                    "/images/app1.png", "/images/app2.png", "/images/app3.png", "/images/app6.png",
+                                                    "/images/app1.png", "/images/app2.png", "/images/app3.png", "/images/app6.png",
+                                                    "/images/app1.png", "/images/app2.png", "/images/app3.png", "/images/app6.png"
+                                                ].map((src, i) => (
                                                     <div key={i} className="relative w-[100px] h-[150px] md:w-[140px] md:h-[200px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
                                                         <img
                                                             src={src}
-                                                            alt={`App Sample ${i}`}
+                                                            alt={`App Opt ${i}`}
                                                             className="w-full h-full object-cover"
                                                         />
                                                     </div>
@@ -105,9 +99,40 @@ export function ServiceDetail() {
                                     </div>
                                 )}
 
+                                {index === 1 && (
+                                    <div className="flex gap-3 mt-4 overflow-x-auto pb-2">
+                                        {/* Menu Category Images: 4, 5 */}
+                                        {["/images/app4.png", "/images/app5.png"].map((src, i) => (
+                                            <div key={i} className="relative w-full h-[150px] md:h-[200px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
+                                                <img
+                                                    src={src}
+                                                    alt={`Menu Sample ${i}`}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+
+                                {index === 2 && (
+                                    <div className="flex gap-3 mt-4 overflow-x-auto pb-2">
+                                        {/* Customer Appeal Images: 7 */}
+                                        {["/images/app7.png"].map((src, i) => (
+                                            <div key={i} className="relative w-full h-[150px] md:h-[200px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
+                                                <img
+                                                    src={src}
+                                                    alt={`Appeal Sample ${i}`}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+
                                 {index === 3 && (
                                     <div className="flex gap-3 mt-4 overflow-x-auto pb-2">
-                                        {bannerImages.map((src, i) => (
+                                        {/* Banner Images: 1, 2 */}
+                                        {["/images/banner1.jpg", "/images/banner2.jpg"].map((src, i) => (
                                             <div key={i} className="relative w-full h-[150px] md:h-[200px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
                                                 <img
                                                     src={src}
