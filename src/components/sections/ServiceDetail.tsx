@@ -76,8 +76,17 @@ export function ServiceDetail() {
                                 {index === 0 && (
                                     <div className="w-full overflow-hidden mt-4">
                                         <div className="relative w-full h-[150px] md:h-[200px]">
-                                            <div className="flex animate-marquee gap-3 absolute top-0 left-0 h-full">
-                                                {[...itemImages, ...itemImages, ...itemImages].map((src, i) => (
+                                            <motion.div
+                                                className="flex gap-3 absolute top-0 left-0 h-full"
+                                                animate={{ x: ["0%", "-50%"] }}
+                                                transition={{
+                                                    repeat: Infinity,
+                                                    duration: 30,
+                                                    ease: "linear",
+                                                }}
+                                                style={{ width: "max-content" }}
+                                            >
+                                                {[...itemImages, ...itemImages, ...itemImages, ...itemImages].map((src, i) => (
                                                     <div key={i} className="relative w-[100px] h-[150px] md:w-[140px] md:h-[200px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
                                                         <img
                                                             src={src}
@@ -86,7 +95,7 @@ export function ServiceDetail() {
                                                         />
                                                     </div>
                                                 ))}
-                                            </div>
+                                            </motion.div>
                                         </div>
                                     </div>
                                 )}
