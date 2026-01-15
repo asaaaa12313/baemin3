@@ -18,14 +18,7 @@ export function Consultation() {
         e.preventDefault();
 
         // Google Apps Script Web App URL
-        // User needs to deploy the script and replace this URL, or we suggest they provide it.
-        // For now, we will add a placeholder and instruction.
-        const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_URL_HERE";
-
-        if (GOOGLE_SCRIPT_URL === "YOUR_GOOGLE_SCRIPT_URL_HERE") {
-            alert("구글 시트 연동을 위해 스크립트 배포가 필요합니다. 동봉된 GOOGLE_SHEET_SCRIPT.js 파일을 참고해주세요.");
-            return;
-        }
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwMnOjbtLDAvywlEiDLBGq0s0NJ1k1pm0gr9qboVlks5XtxSqiITHN4SOKySu8z17hyLA/exec";
 
         try {
             await fetch(GOOGLE_SCRIPT_URL, {
