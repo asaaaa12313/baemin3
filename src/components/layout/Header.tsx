@@ -49,7 +49,12 @@ export function Header() {
                             {link.name}
                         </a>
                     ))}
-                    <Button variant={isScrolled ? "primary" : "accent"} size="sm" className="rounded-full">
+                    <Button
+                        variant={isScrolled ? "primary" : "accent"}
+                        size="sm"
+                        className="rounded-full"
+                        onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
                         무료 진단 신청
                     </Button>
                 </nav>

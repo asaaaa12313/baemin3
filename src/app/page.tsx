@@ -7,6 +7,7 @@ import { Upsell } from "@/components/sections/Upsell";
 import { Addons } from "@/components/sections/Addons";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Evidence } from "@/components/sections/Evidence";
+import { Consultation } from "@/components/sections/Consultation";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Portfolio />
       <Upsell />
       <Evidence />
+      <Consultation />
       <Footer />
     </main>
   );

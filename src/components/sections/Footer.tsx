@@ -12,7 +12,7 @@ export function Footer() {
                         </div>
                         <div className="md:text-right">
                             <p>이용약관 | 개인정보처리방침</p>
-                            <p className="mt-2">Copyright © 2024 Wiz The Planning. All rights reserved.</p>
+                            <p className="mt-2">Copyright © 2026 Wiz The Planning. All rights reserved.</p>
                         </div>
                     </div>
                     <p className="text-xs text-gray-400">
@@ -28,7 +28,12 @@ export function Footer() {
                         고민하는 시간에도<br />
                         <span className="text-vivid-orange">경쟁 업체는 앞서갑니다.</span>
                     </div>
-                    <Button size="md" variant="accent" className="rounded-full shadow-lg">
+                    <Button
+                        size="md"
+                        variant="accent"
+                        className="rounded-full shadow-lg"
+                        onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
                         무료 상담 신청
                     </Button>
                 </div>

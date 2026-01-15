@@ -53,7 +53,12 @@ export function Hero() {
                     transition={{ duration: 0.5, delay: 1 }}
                 >
                     <Magnetic>
-                        <Button size="xl" variant="accent" className="rounded-full text-lg shadow-[0_0_40px_-5px_rgba(255,87,34,0.5)] hover:shadow-[0_0_60px_-10px_rgba(255,87,34,0.7)] hover:scale-105 transition-transform duration-300">
+                        <Button
+                            size="xl"
+                            variant="accent"
+                            className="rounded-full text-lg shadow-[0_0_40px_-5px_rgba(255,87,34,0.5)] hover:shadow-[0_0_60px_-10px_rgba(255,87,34,0.7)] hover:scale-105 transition-transform duration-300"
+                            onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}
+                        >
                             내 가게 문제점 무료 진단받기 &gt;
                         </Button>
                     </Magnetic>
