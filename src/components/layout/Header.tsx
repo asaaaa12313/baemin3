@@ -17,7 +17,7 @@ export function Header() {
     }, []);
 
     const navLinks = [
-        { name: '서비스 소개', href: '#pricing' },
+        { name: '서비스 소개', href: '#services' },
         { name: '성공 사례', href: '#reviews' },
         { name: '가격', href: '#pricing' },
     ];

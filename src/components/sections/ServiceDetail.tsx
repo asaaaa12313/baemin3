@@ -64,7 +64,7 @@ export function ServiceDetail() {
     ];
 
     return (
-        <section className="py-24 bg-white px-4">
+        <section id="services" className="py-24 bg-white px-4">
             <div className="mx-auto max-w-5xl">
                 {/* Section 1: Execution Service */}
                 <motion.div

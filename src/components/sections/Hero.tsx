@@ -2,14 +2,14 @@ import { Button } from '@/components/ui/Button';
 import { motion } from 'framer-motion';
 import { TextReveal } from '@/components/ui/motion/TextReveal';
 import { ParallaxBackground } from '@/components/ui/motion/ParallaxBackground';
-import { InfographicBackground } from '@/components/ui/InfographicBackground';
+import { DocumentBackground } from '@/components/ui/DocumentBackground';
 import { Magnetic } from '@/components/ui/motion/Magnetic';
 
 export function Hero() {
     return (
         <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-black">
-            {/* Background: Marketing Infographic Data */}
-            <InfographicBackground />
+            {/* Background: Document & Graphic Shapes */}
+            <DocumentBackground />
 
 
             <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
