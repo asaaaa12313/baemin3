@@ -16,8 +16,8 @@ export default function Home() {
     <main className="min-h-screen font-sans selection:bg-vivid-orange selection:text-white">
       <Header />
       <Hero />
-      <Solution />
       <ServiceDetail />
+      <Solution />
       <Addons />
       <Portfolio />
       <Upsell />
