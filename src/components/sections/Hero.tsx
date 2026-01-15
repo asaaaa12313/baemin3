@@ -54,14 +54,35 @@ export function Hero() {
                 </motion.div>
             </div>
 
-            {/* Scroll Indicator */}
-            <motion.div
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5 }}
-            >
-                <span className="text-sm">Scroll Down</span>
-            </motion.div>
+            {/* Bottom Marquee */}
+            <div className="absolute bottom-0 left-0 w-full z-20 py-4 bg-gradient-to-t from-black via-black/80 to-transparent">
+                <div className="w-full overflow-hidden">
+                    <motion.div
+                        className="flex gap-4"
+                        animate={{ x: ["0%", "-50%"] }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 20,
+                            ease: "linear",
+                        }}
+                        style={{ width: "max-content" }}
+                    >
+                        {[
+                            '/images/1.png', '/images/2.png', '/images/3.png', '/images/4.png', '/images/5.png', '/images/6.png',
+                            '/images/1.png', '/images/2.png', '/images/3.png', '/images/4.png', '/images/5.png', '/images/6.png',
+                            '/images/1.png', '/images/2.png', '/images/3.png', '/images/4.png', '/images/5.png', '/images/6.png'
+                        ].map((src, i) => (
+                            <div key={i} className="relative w-[120px] h-[80px] rounded-md overflow-hidden border border-white/10 opacity-70 hover:opacity-100 transition-opacity">
+                                <img
+                                    src={src}
+                                    alt={`Portfolio ${i}`}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        ))}
+                    </motion.div>
+                </div>
+            </div>
         </section>
     );
 }
