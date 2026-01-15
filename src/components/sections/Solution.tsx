@@ -58,7 +58,11 @@ export function Solution() {
                                     ))}
                                 </ul>
 
-                                <Button variant="secondary" className="w-full text-sm py-2">
+                                <Button
+                                    variant="secondary"
+                                    className="w-full text-sm py-2"
+                                    onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}
+                                >
                                     신청하기
                                 </Button>
                             </Card>
@@ -106,7 +110,11 @@ export function Solution() {
                                     ))}
                                 </ul>
 
-                                <Button variant="accent" className="w-full text-base py-3 shadow-orange-200">
+                                <Button
+                                    variant="accent"
+                                    className="w-full text-base py-3 shadow-orange-200"
+                                    onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}
+                                >
                                     지금 혜택받고 신청하기
                                 </Button>
                             </Card>
@@ -147,7 +155,11 @@ export function Solution() {
                                     </li>
                                 </ul>
 
-                                <Button variant="secondary" className="w-full text-sm py-2">
+                                <Button
+                                    variant="secondary"
+                                    className="w-full text-sm py-2"
+                                    onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}
+                                >
                                     진단만 신청하기
                                 </Button>
                             </Card>
