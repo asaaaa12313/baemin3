@@ -28,8 +28,8 @@ const reviews = [
     {
         name: "OO피자 사장님",
         time: "오후 05:20",
-        message: "깃발 위치 옮기고는 컨설팅대로 했더니\n어제 매출 역대 최고 찍었습니다 ㅠㅠ",
-        reply: "효율 좋은 자리로 잘 옮기셨어요.\n이제 단골 관리만 좀 더 신경써주세요!",
+        message: "광고 최적화하고 컨설팅대로 했더니\n어제 매출 역대 최고 찍었습니다 ㅠㅠ",
+        reply: "효율 좋은 세팅으로 잘 바꾸셨어요.\n이제 단골 관리만 좀 더 신경써주세요!",
         summary: "\"컨설팅대로 했더니 어제 매출 역대 최고 찍었습니다.\""
     },
     {
@@ -45,7 +45,7 @@ const graphs = [
     {
         title: "OO족발 사장님",
         rate: 123,
-        desc: "\"깃발 위치 옮기고는 컨설팅대로 했더니 매출 2배 뛰었습니다.\"",
+        desc: "\"광고 최적화하고 컨설팅대로 했더니 매출 2배 뛰었습니다.\"",
         bars: [30, 40, 35, 50, 70, 90]
     },
     {
@@ -69,7 +69,7 @@ const graphs = [
     {
         title: "OO찜닭 사장님",
         rate: 98,
-        desc: "\"깃발 갯수는 줄였는데 노출수는 더 늘었습니다. 신기하네요.\"",
+        desc: "\"불필요한 광고비는 줄였는데 노출수는 더 늘었습니다. 신기하네요.\"",
         bars: [30, 35, 40, 50, 70, 85]
     }
 ];
@@ -121,10 +121,10 @@ function GraphCard({ item }: { item: typeof graphs[0] }) {
                     <div
                         key={i}
                         className={`w-1/6 rounded-t-lg relative group ${i === item.bars.length - 1
-                                ? 'bg-vivid-orange shadow-[0_-4px_20px_rgba(255,87,34,0.3)]'
-                                : i === item.bars.length - 2
-                                    ? 'bg-[#9CA3AF]'
-                                    : 'bg-gray-100'
+                            ? 'bg-vivid-orange shadow-[0_-4px_20px_rgba(255,87,34,0.3)]'
+                            : i === item.bars.length - 2
+                                ? 'bg-[#9CA3AF]'
+                                : 'bg-gray-100'
                             }`}
                         style={{ height: `${h}%` }}
                     >
@@ -142,7 +142,7 @@ function GraphCard({ item }: { item: typeof graphs[0] }) {
 
 export function Evidence() {
     return (
-        <section className="py-24 bg-gray-50 overflow-hidden">
+        <section id="reviews" className="py-24 bg-gray-50 overflow-hidden">
             <div className="text-center mb-16 px-4">
                 <h2 className="text-3xl font-bold text-deep-navy md:text-5xl">
                     사장님들의 매출 그래프가<br />
