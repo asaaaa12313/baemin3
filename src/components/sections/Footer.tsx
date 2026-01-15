@@ -14,7 +14,6 @@ export function Footer() {
                             <h4 className="font-bold text-deep-navy text-lg mb-4">(주)위즈더플래닝 | 대표: 정현우</h4>
                             <div className="space-y-1 text-xs md:text-sm">
                                 <p>사업자등록번호: 668-81-00391</p>
-                                <p>통신판매업신고번호: [내일 업데이트 예정]</p>
                                 <p>주소: 서울시 금천구 디지털로 178 가산퍼블릭 A동 2518호, 2519호</p>
                                 <p>개인정보 보호책임자: 김민우 (qpqpqp@wiztheplanning.com)</p>
                                 <p>호스팅 서비스: Vercel Inc.</p>
