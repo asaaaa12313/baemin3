@@ -2,14 +2,14 @@ import { Button } from '@/components/ui/Button';
 import { motion } from 'framer-motion';
 import { TextReveal } from '@/components/ui/motion/TextReveal';
 import { ParallaxBackground } from '@/components/ui/motion/ParallaxBackground';
-import { AbyssalNetworkBackground } from '@/components/ui/AbyssalNetworkBackground';
+import { AppleStyleBackground } from '@/components/ui/AppleStyleBackground';
 import { Magnetic } from '@/components/ui/motion/Magnetic';
 
 export function Hero() {
     return (
         <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-black">
-            {/* Background with Abyssal Network */}
-            <AbyssalNetworkBackground />
+            {/* Background: Apple-style Minimalist Mesh */}
+            <AppleStyleBackground />
 
 
             <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
