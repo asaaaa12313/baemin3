@@ -42,7 +42,7 @@ export function Portfolio() {
                 >
                     {/* Double the images for seamless loop */}
                     {[...images, ...images].map((src, index) => (
-                        <div key={index} className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] flex-shrink-0 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                        <div key={index} className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] flex-shrink-0 rounded-2xl overflow-hidden transition-all duration-500">
                             <Image
                                 src={src}
                                 alt={`Portfolio ${index}`}

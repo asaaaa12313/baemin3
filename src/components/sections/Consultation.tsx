@@ -14,13 +14,41 @@ export function Consultation() {
         inquiry: "",
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Since the user will likely connect this later, we'll just log it for now
-        // or provide a basic Google Form action if they provide a direct URL.
-        // For now, based on instructions, we build the UI for reception.
-        console.log("Form Submitted:", formData);
-        alert("상담 신청이 접수되었습니다. 빠르게 확인 후 연락드리겠습니다.");
+
+        // Google Apps Script Web App URL
+        // User needs to deploy the script and replace this URL, or we suggest they provide it.
+        // For now, we will add a placeholder and instruction.
+        const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_URL_HERE";
+
+        if (GOOGLE_SCRIPT_URL === "YOUR_GOOGLE_SCRIPT_URL_HERE") {
+            alert("구글 시트 연동을 위해 스크립트 배포가 필요합니다. 동봉된 GOOGLE_SHEET_SCRIPT.js 파일을 참고해주세요.");
+            return;
+        }
+
+        try {
+            await fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors", // Crucial for Google Apps Script
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            alert("상담 신청이 접수되었습니다. 빠르게 확인 후 연락드리겠습니다.");
+            setFormData({
+                businessName: "",
+                applicantName: "",
+                contact: "",
+                address: "",
+                inquiry: "",
+            });
+        } catch (error) {
+            console.error("Error:", error);
+            alert("접수 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
