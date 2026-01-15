@@ -26,83 +26,82 @@ export function ServiceDetail() {
             title: "4. 리뷰 배너 디자인 제작 (리뷰 유도)",
             description: "리뷰 배너 디자인 제작은 손님에게 기분 좋은 칭찬을 유도하는 장치입니다. 다른 손님이 남긴 좋은 리뷰는 매장을 찾아온 손님에게 옆 테이블에서 들려오는 맛있다라는 감탄사와 같습니다. 저희는 손님이 음식을 다 먹고 난 후 기꺼이 별점 5개와 좋은 사진 리뷰를 남길 수 있도록, 눈에 확 띄면서도 기분 좋은 약속이 담긴 근사한 안내판을 만들어 앱 상단에 걸어드립니다."
         }
-        }
     ];
 
-const itemImages = [
-    "/images/app1.png", "/images/app2.png", "/images/app3.png", "/images/app4.png",
-    "/images/app5.png", "/images/app6.png", "/images/app7.png",
-    "/images/banner1.jpg", "/images/banner2.jpg"
-];
+    const itemImages = [
+        "/images/app1.png", "/images/app2.png", "/images/app3.png", "/images/app4.png",
+        "/images/app5.png", "/images/app6.png", "/images/app7.png",
+        "/images/banner1.jpg", "/images/banner2.jpg"
+    ];
 
-return (
-    <section className="py-24 bg-white px-4">
-        <div className="mx-auto max-w-5xl">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="mb-16 text-center"
-            >
-                <h2 className="text-3xl font-bold text-deep-navy md:text-4xl leading-tight mb-6">
-                    사장님은 <span className="text-vivid-orange">주방</span>에만 집중하세요.<br />
-                    복잡한 앱 관리는 저희가 맡겠습니다.
-                </h2>
-                <p className="text-gray-500 text-lg max-w-3xl mx-auto leading-relaxed">
-                    사장님, 음식 맛은 누구보다 자신 있는데 배달 앱 주문이 생각만큼 들어오지 않아 답답하셨을 겁니다.
-                    스마트폰 화면 속 장사는 오프라인 매장과는 문법이 조금 다릅니다.
-                    손님이 가게 문을 열고 들어오게 만드는 것부터, 메뉴판을 보고 주문을 결심하게 만드는 과정까지
-                    저희가 대신 챙겨드리는 네 가지 핵심 과정을 알기 쉽게 설명해 드리겠습니다.
-                </p>
-            </motion.div>
+    return (
+        <section className="py-24 bg-white px-4">
+            <div className="mx-auto max-w-5xl">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-16 text-center"
+                >
+                    <h2 className="text-3xl font-bold text-deep-navy md:text-4xl leading-tight mb-6">
+                        사장님은 <span className="text-vivid-orange">주방</span>에만 집중하세요.<br />
+                        복잡한 앱 관리는 저희가 맡겠습니다.
+                    </h2>
+                    <p className="text-gray-500 text-lg max-w-3xl mx-auto leading-relaxed">
+                        사장님, 음식 맛은 누구보다 자신 있는데 배달 앱 주문이 생각만큼 들어오지 않아 답답하셨을 겁니다.
+                        스마트폰 화면 속 장사는 오프라인 매장과는 문법이 조금 다릅니다.
+                        손님이 가게 문을 열고 들어오게 만드는 것부터, 메뉴판을 보고 주문을 결심하게 만드는 과정까지
+                        저희가 대신 챙겨드리는 네 가지 핵심 과정을 알기 쉽게 설명해 드리겠습니다.
+                    </p>
+                </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {details.map((item, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
-                    >
-                        <Card className="h-full p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
-                            <div className="mb-6 bg-orange-50 w-16 h-16 rounded-2xl flex items-center justify-center">
-                                {item.icon}
-                            </div>
-                            <h3 className="text-xl font-bold text-deep-navy mb-4">{item.title}</h3>
-                            <p className="text-gray-600 leading-relaxed text-sm mb-6">
-                                {item.description}
-                            </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {details.map((item, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                        >
+                            <Card className="h-full p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+                                <div className="mb-6 bg-orange-50 w-16 h-16 rounded-2xl flex items-center justify-center">
+                                    {item.icon}
+                                </div>
+                                <h3 className="text-xl font-bold text-deep-navy mb-4">{item.title}</h3>
+                                <p className="text-gray-600 leading-relaxed text-sm mb-6">
+                                    {item.description}
+                                </p>
 
-                            {index === 0 && (
-                                <div className="w-full overflow-hidden mt-4">
-                                    <div className="relative w-full h-[150px] md:h-[200px]">
-                                        <div className="flex animate-marquee gap-3 absolute top-0 left-0 h-full">
-                                            {[...itemImages, ...itemImages, ...itemImages].map((src, i) => (
-                                                <div key={i} className="relative w-[100px] h-[150px] md:w-[140px] md:h-[200px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
-                                                    <img
-                                                        src={src}
-                                                        alt={`App Sample ${i}`}
-                                                        className="w-full h-full object-cover"
-                                                    />
-                                                </div>
-                                            ))}
+                                {index === 0 && (
+                                    <div className="w-full overflow-hidden mt-4">
+                                        <div className="relative w-full h-[150px] md:h-[200px]">
+                                            <div className="flex animate-marquee gap-3 absolute top-0 left-0 h-full">
+                                                {[...itemImages, ...itemImages, ...itemImages].map((src, i) => (
+                                                    <div key={i} className="relative w-[100px] h-[150px] md:w-[140px] md:h-[200px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
+                                                        <img
+                                                            src={src}
+                                                            alt={`App Sample ${i}`}
+                                                            className="w-full h-full object-cover"
+                                                        />
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            )}
-                        </Card>
-                    </motion.div>
-                ))}
-            </div>
+                                )}
+                            </Card>
+                        </motion.div>
+                    ))}
+                </div>
 
-            <div className="mt-16 text-center">
-                <p className="text-lg font-medium text-deep-navy">
-                    결국 이 모든 과정은 사장님이 주방에서 요리에만 집중하실 수 있도록,<br className="hidden md:block" />
-                    복잡한 모바일 세상 속 <span className="text-vivid-orange font-bold">호객 행위와 접객을 저희가 도맡아 매출로 연결해 드리는 일</span>입니다.
-                </p>
+                <div className="mt-16 text-center">
+                    <p className="text-lg font-medium text-deep-navy">
+                        결국 이 모든 과정은 사장님이 주방에서 요리에만 집중하실 수 있도록,<br className="hidden md:block" />
+                        복잡한 모바일 세상 속 <span className="text-vivid-orange font-bold">호객 행위와 접객을 저희가 도맡아 매출로 연결해 드리는 일</span>입니다.
+                    </p>
+                </div>
             </div>
-        </div>
-    </section>
-);
+        </section>
+    );
 }
