@@ -4,6 +4,41 @@ import { motion } from "framer-motion";
 import { MapPin, LayoutList, PenTool, MessageSquareQuote } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 
+function MarqueeImage({ images }: { images: string[] }) {
+    // Determine multiplication factor to ensure seamless loop
+    // Ensure at least 12 items or sufficient width for smoothness
+    const filledImages = images.length === 0 ? [] :
+        images.length < 5 ? [...images, ...images, ...images, ...images, ...images, ...images] :
+            [...images, ...images, ...images];
+
+    return (
+        <div className="w-full overflow-hidden mt-4">
+            <div className="relative w-full h-[150px] md:h-[200px]">
+                <motion.div
+                    className="flex gap-3 absolute top-0 left-0 h-full"
+                    animate={{ x: ["0%", "-50%"] }}
+                    transition={{
+                        repeat: Infinity,
+                        duration: 30, // Consistent speed
+                        ease: "linear",
+                    }}
+                    style={{ width: "max-content" }}
+                >
+                    {filledImages.map((src, i) => (
+                        <div key={i} className="relative w-[100px] h-[150px] md:w-[140px] md:h-[200px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
+                            <img
+                                src={src}
+                                alt={`Service Image ${i}`}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                    ))}
+                </motion.div>
+            </div>
+        </div>
+    );
+}
+
 export function ServiceDetail() {
     const details = [
         {
@@ -68,80 +103,27 @@ export function ServiceDetail() {
                                 </p>
 
                                 {index === 0 && (
-                                    <div className="w-full overflow-hidden mt-4">
-                                        <div className="relative w-full h-[150px] md:h-[200px]">
-                                            <motion.div
-                                                className="flex gap-3 absolute top-0 left-0 h-full"
-                                                animate={{ x: ["0%", "-50%"] }}
-                                                transition={{
-                                                    repeat: Infinity,
-                                                    duration: 30,
-                                                    ease: "linear",
-                                                }}
-                                                style={{ width: "max-content" }}
-                                            >
-                                                {/* App Optimization Images: 1, 2, 3, 6 */}
-                                                {[
-                                                    "/images/app1.png", "/images/app2.png", "/images/app3.png", "/images/app6.png",
-                                                    "/images/app1.png", "/images/app2.png", "/images/app3.png", "/images/app6.png",
-                                                    "/images/app1.png", "/images/app2.png", "/images/app3.png", "/images/app6.png"
-                                                ].map((src, i) => (
-                                                    <div key={i} className="relative w-[100px] h-[150px] md:w-[140px] md:h-[200px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
-                                                        <img
-                                                            src={src}
-                                                            alt={`App Opt ${i}`}
-                                                            className="w-full h-full object-cover"
-                                                        />
-                                                    </div>
-                                                ))}
-                                            </motion.div>
-                                        </div>
-                                    </div>
+                                    <MarqueeImage images={[
+                                        "/images/app1.png", "/images/app2.png", "/images/app3.png", "/images/app6.png",
+                                    ]} />
                                 )}
 
                                 {index === 1 && (
-                                    <div className="flex gap-3 mt-4 overflow-x-auto pb-2">
-                                        {/* Menu Category Images: 4, 5 */}
-                                        {["/images/app4.png", "/images/app5.png"].map((src, i) => (
-                                            <div key={i} className="relative w-full h-[150px] md:h-[200px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
-                                                <img
-                                                    src={src}
-                                                    alt={`Menu Sample ${i}`}
-                                                    className="w-full h-full object-cover"
-                                                />
-                                            </div>
-                                        ))}
-                                    </div>
+                                    <MarqueeImage images={[
+                                        "/images/app4.png", "/images/app5.png"
+                                    ]} />
                                 )}
 
                                 {index === 2 && (
-                                    <div className="flex gap-3 mt-4 overflow-x-auto pb-2">
-                                        {/* Customer Appeal Images: 7 */}
-                                        {["/images/app7.png"].map((src, i) => (
-                                            <div key={i} className="relative w-full h-[150px] md:h-[200px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
-                                                <img
-                                                    src={src}
-                                                    alt={`Appeal Sample ${i}`}
-                                                    className="w-full h-full object-cover"
-                                                />
-                                            </div>
-                                        ))}
-                                    </div>
+                                    <MarqueeImage images={[
+                                        "/images/app7.png"
+                                    ]} />
                                 )}
 
                                 {index === 3 && (
-                                    <div className="flex gap-3 mt-4 overflow-x-auto pb-2">
-                                        {/* Banner Images: 1, 2 */}
-                                        {["/images/banner1.jpg", "/images/banner2.jpg"].map((src, i) => (
-                                            <div key={i} className="relative w-full h-[150px] md:h-[200px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
-                                                <img
-                                                    src={src}
-                                                    alt={`Banner Sample ${i}`}
-                                                    className="w-full h-full object-cover"
-                                                />
-                                            </div>
-                                        ))}
-                                    </div>
+                                    <MarqueeImage images={[
+                                        "/images/banner1.jpg", "/images/banner2.jpg"
+                                    ]} />
                                 )}
                             </Card>
                         </motion.div>
