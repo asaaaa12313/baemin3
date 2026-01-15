@@ -16,7 +16,7 @@ export function Addons() {
                     필요한 것만 골라 담으세요 (Add-ons)
                 </motion.h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Addon 1 */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -84,29 +84,6 @@ export function Addons() {
                                     <p className="flex justify-between"><span>50컷</span> <span className="text-gray-400">상담 필요</span></p>
                                 </div>
                                 <p className="text-xs text-gray-400 mt-auto">* 지역별 출장비 상이</p>
-                            </Card>
-                        </TiltCard>
-                    </motion.div>
-
-                    {/* Addon 4 */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.4 }}
-                        className="h-full"
-                    >
-                        <TiltCard className="h-full">
-                            <Card className="h-full p-6 flex flex-col items-start bg-gray-50 border border-gray-100 hover:border-vivid-orange/30 transition-colors">
-                                <div className="p-3 bg-white rounded-xl shadow-sm mb-4 text-vivid-orange">
-                                    <MessageSquare size={24} />
-                                </div>
-                                <h4 className="font-bold text-lg mb-2 text-deep-navy">원포인트 컨설팅</h4>
-                                <div className="space-y-1 text-sm text-gray-600 mb-4 flex-1 w-full">
-                                    <p className="font-medium text-gray-800">최적화 없이 진단만 진행</p>
-                                    <p className="font-bold text-lg text-deep-navy mt-1">100,000원</p>
-                                </div>
-                                <p className="text-xs text-gray-400 mt-auto">* 1회성 정밀 진단</p>
                             </Card>
                         </TiltCard>
                     </motion.div>
