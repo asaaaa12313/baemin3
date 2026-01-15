@@ -72,7 +72,7 @@ export function Consultation() {
                                         placeholder="가게 이름을 입력하세요"
                                         value={formData.businessName}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-vivid-orange focus:ring-2 focus:ring-vivid-orange/20 outline-none transition-all placeholder:text-gray-300"
+                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-vivid-orange focus:ring-2 focus:ring-vivid-orange/20 outline-none transition-all placeholder:text-gray-300 text-gray-900"
                                     />
                                 </div>
                                 <div className="space-y-2">
@@ -87,7 +87,7 @@ export function Consultation() {
                                         placeholder="성함을 입력하세요"
                                         value={formData.applicantName}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-vivid-orange focus:ring-2 focus:ring-vivid-orange/20 outline-none transition-all placeholder:text-gray-300"
+                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-vivid-orange focus:ring-2 focus:ring-vivid-orange/20 outline-none transition-all placeholder:text-gray-300 text-gray-900"
                                     />
                                 </div>
                             </div>
@@ -135,7 +135,7 @@ export function Consultation() {
                                     placeholder="현재 가장 고민되는 부분이나 해결하고 싶은 점을 자유롭게 적어주세요."
                                     value={formData.inquiry}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-vivid-orange focus:ring-2 focus:ring-vivid-orange/20 outline-none transition-all placeholder:text-gray-300 resize-none"
+                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-vivid-orange focus:ring-2 focus:ring-vivid-orange/20 outline-none transition-all placeholder:text-gray-300 text-gray-900 resize-none"
                                 />
                             </div>
 
