@@ -2,7 +2,6 @@
 
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
-import { Problem } from "@/components/sections/Problem";
 import { Solution } from "@/components/sections/Solution";
 import { Upsell } from "@/components/sections/Upsell";
 import { Addons } from "@/components/sections/Addons";
@@ -14,7 +13,6 @@ export default function Home() {
     <main className="min-h-screen font-sans selection:bg-vivid-orange selection:text-white">
       <Header />
       <Hero />
-      <Problem />
       <Solution />
       <Upsell />
       <Addons />
