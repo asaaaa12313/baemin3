@@ -2,26 +2,15 @@ import { Button } from '@/components/ui/Button';
 import { motion } from 'framer-motion';
 import { TextReveal } from '@/components/ui/motion/TextReveal';
 import { ParallaxBackground } from '@/components/ui/motion/ParallaxBackground';
+import { AbyssalNetworkBackground } from '@/components/ui/AbyssalNetworkBackground';
 import { Magnetic } from '@/components/ui/motion/Magnetic';
 
 export function Hero() {
     return (
         <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-black">
-            {/* Background with Parallax */}
-            {/* Background with Parallax */}
-            <ParallaxBackground
-                images={[
-                    '/images/1.png',
-                    '/images/2.png',
-                    '/images/3.png',
-                    '/images/4.png',
-                    '/images/5.png',
-                    '/images/6.png'
-                ]}
-                className="absolute inset-0"
-            >
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-deep-navy/90"></div>
-            </ParallaxBackground>
+            {/* Background with Abyssal Network */}
+            <AbyssalNetworkBackground />
+
 
             <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
                 <motion.div
