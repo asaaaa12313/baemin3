@@ -14,8 +14,8 @@ export function AbyssalNetworkBackground() {
 
         let animationFrameId: number;
         let particles: Particle[] = [];
-        const particleCount = 100; // Number of nodes
-        const connectionDistance = 150; // Distance to connect nodes
+        const particleCount = 130;  // Increased density
+        const connectionDistance = 180; // Longer connections
 
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
@@ -29,14 +29,18 @@ export function AbyssalNetworkBackground() {
             vx: number;
             vy: number;
             size: number;
+            color: string;
 
             constructor() {
                 this.x = Math.random() * canvas!.width;
                 this.y = Math.random() * canvas!.height;
-                // Very slow movement for "abyssal" feel
-                this.vx = (Math.random() - 0.5) * 0.3;
-                this.vy = (Math.random() - 0.5) * 0.3;
-                this.size = Math.random() * 1.5 + 0.5; // Tiny nodes
+                // Faster movement for more dynamic feel
+                this.vx = (Math.random() - 0.5) * 0.8;
+                this.vy = (Math.random() - 0.5) * 0.8;
+                this.size = Math.random() * 2 + 1; // Larger nodes
+
+                // Add orange accents to some nodes to match brand
+                this.color = Math.random() > 0.85 ? "#FF5722" : "rgba(220, 220, 220, 0.8)";
             }
 
             update() {
@@ -52,7 +56,7 @@ export function AbyssalNetworkBackground() {
                 if (!ctx) return;
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = "rgba(100, 100, 100, 0.5)"; // Faint gray nodes
+                ctx.fillStyle = this.color;
                 ctx.fill();
             }
         }
@@ -86,18 +90,16 @@ export function AbyssalNetworkBackground() {
 
                     if (distance < connectionDistance) {
                         ctx.beginPath();
-                        ctx.strokeStyle = `rgba(60, 60, 60, ${1 - distance / connectionDistance})`; // Faint gray lines
-                        ctx.lineWidth = 0.5; // hairline
+                        // Brighter lines: range from 0.05 to 0.4 opacity based on distance
+                        const opacity = 1 - (distance / connectionDistance);
+                        ctx.strokeStyle = `rgba(180, 180, 180, ${opacity * 0.5})`;
+                        ctx.lineWidth = 0.8;
                         ctx.moveTo(p1.x, p1.y);
                         ctx.lineTo(p2.x, p2.y);
                         ctx.stroke();
                     }
                 }
             }
-
-            // Apply noise overlay via composite operation or just a pattern if possible
-            // Simulating noise with random pixels is expensive in JS loop.
-            // A CSS overlay is better for static noise.
 
             animationFrameId = requestAnimationFrame(drawNetwork);
         };
