@@ -66,10 +66,29 @@ export function Consultation() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-gray-500 text-lg"
+                        className="text-gray-500 text-lg mb-8"
                     >
                         망설이지 마세요. 지금이 가장 빠른 변화의 시작입니다.
                     </motion.p>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                    >
+                        <a
+                            href="http://pf.kakao.com/_DXNxjK/chat"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-[#FEE500] text-[#191919] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#FDD835] transition-colors shadow-lg"
+                        >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 3C5.925 3 1 6.925 1 11.775C1 14.5375 2.9125 16.9875 5.8625 18.525L4.55 23.325C4.4625 23.6375 4.8125 23.8875 5.0875 23.6875L10.6625 19.85C11.1 19.9 11.55 19.925 12 19.925C18.075 19.925 23 16 23 11.15C23 6.3 18.075 3 12 3Z" />
+                            </svg>
+                            카카오톡으로 간편 상담하기
+                        </a>
+                    </motion.div>
                 </div>
 
                 <motion.div
