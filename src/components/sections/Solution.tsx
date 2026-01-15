@@ -38,7 +38,8 @@ export function Solution() {
                             <Card className="h-full flex flex-col items-start p-6 hover:border-deep-navy/30 transition-all duration-300">
                                 <div className="mb-4">
                                     <h3 className="text-xl font-bold text-deep-navy">Basic Plan</h3>
-                                    <p className="text-sm text-gray-500">( 앱 최적화 )</p>
+                                    <p className="text-sm text-gray-500 font-medium mb-1">( 앱 최적화 )</p>
+                                    <p className="text-xs text-gray-400">핵심만 쏙 골라 담았습니다</p>
                                 </div>
                                 <div className="mb-6 flex items-end gap-1">
                                     <span className="text-3xl font-bold text-deep-navy">119,000</span>
@@ -46,10 +47,21 @@ export function Solution() {
                                 </div>
 
                                 <ul className="space-y-3 mb-6 flex-1 w-full text-left text-sm">
-                                    <li className="flex items-start gap-2 text-gray-600">
-                                        <Check className="h-4 w-4 text-deep-navy shrink-0 mt-0.5" />
+                                    <li className="flex items-start gap-2 text-deep-navy font-semibold">
+                                        <Check className="h-4 w-4 text-vivid-orange shrink-0 mt-0.5" />
                                         <span>우리가게 이쁘게 만들기</span>
                                     </li>
+                                    {[
+                                        "앱 최적화 (배민/쿠팡/요기요/땡겨요)",
+                                        "리뷰배너 디자인 제작",
+                                        "메뉴 카테고리 & 메뉴명 수정",
+                                        "고객 소구점 기반 주문 글 수정"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2 text-gray-600">
+                                            <Check className="h-4 w-4 text-deep-navy shrink-0 mt-0.5" />
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
                                 </ul>
 
                                 <Button
@@ -80,7 +92,8 @@ export function Solution() {
 
                                 <div className="mb-4 text-left">
                                     <h3 className="text-xl font-bold text-deep-navy">Premium Plan</h3>
-                                    <p className="text-xs text-vivid-orange font-medium">( 앱 최적화 + 컨설팅 )</p>
+                                    <p className="text-sm text-vivid-orange font-bold mb-1">( 앱 최적화 + 컨설팅 )</p>
+                                    <p className="text-xs text-gray-500">전문 컨설팅 포함 패키지</p>
                                 </div>
                                 <div className="mb-6 flex items-end gap-1">
                                     <span className="text-3xl font-bold text-deep-navy">199,000</span>
@@ -88,10 +101,25 @@ export function Solution() {
                                 </div>
 
                                 <ul className="space-y-3 mb-6 flex-1 w-full text-left text-sm">
+                                    <li className="flex items-start gap-2 font-bold text-deep-navy">
+                                        <Check className="h-4 w-4 text-vivid-orange shrink-0 mt-0.5" />
+                                        <span>우리가게 이쁘게 꾸미고, 문제점 분석 및 개선</span>
+                                    </li>
                                     <li className="flex items-start gap-2 font-semibold text-deep-navy">
                                         <Check className="h-4 w-4 text-vivid-orange shrink-0 mt-0.5" />
-                                        <span>우리가게 이쁘게 꾸미고 문제점 및 경쟁업체 분석, 개선하기</span>
+                                        <span>Basic 상품 전체 포함</span>
                                     </li>
+                                    {[
+                                        "가게 문제점 정밀 파악",
+                                        "주변 경쟁 업체 심층 분석",
+                                        "개선점 제안 레포트 (PDF)",
+                                        "1:1 맞춤형 컨설팅 (30분)"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2 text-gray-600">
+                                            <Check className="h-4 w-4 text-vivid-orange shrink-0 mt-0.5" />
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
                                 </ul>
 
                                 <Button
@@ -118,7 +146,8 @@ export function Solution() {
                             <Card className="h-full flex flex-col items-start p-6 hover:border-deep-navy/30 transition-all duration-300">
                                 <div className="mb-4">
                                     <h3 className="text-xl font-bold text-deep-navy">One-Point</h3>
-                                    <p className="text-sm text-gray-500">(정밀 컨설팅)</p>
+                                    <p className="text-sm text-gray-500 font-medium mb-1">(정밀 컨설팅)</p>
+                                    <p className="text-xs text-gray-400">부담 없는 1회성 진단</p>
                                 </div>
                                 <div className="mb-6 flex items-end gap-1">
                                     <span className="text-3xl font-bold text-deep-navy">100,000</span>
@@ -126,13 +155,25 @@ export function Solution() {
                                 </div>
 
                                 <ul className="space-y-3 mb-6 flex-1 w-full text-left text-sm">
-                                    <li className="flex items-start gap-2 text-gray-600">
-                                        <Check className="h-4 w-4 text-deep-navy shrink-0 mt-0.5" />
-                                        <span>우리가게 문제점 및 주변 경쟁업체 분석을 통한 개선점찾기</span>
+                                    <li className="flex items-start gap-2 text-deep-navy font-semibold">
+                                        <Check className="h-4 w-4 text-vivid-orange shrink-0 mt-0.5" />
+                                        <span>문제점 및 주변 경쟁업체 분석/개선점 도출</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-deep-navy font-semibold">
+                                        <Check className="h-4 w-4 text-vivid-orange shrink-0 mt-0.5" />
+                                        <span>맞춤 컨설팅</span>
                                     </li>
                                     <li className="flex items-start gap-2 text-gray-600">
                                         <Check className="h-4 w-4 text-deep-navy shrink-0 mt-0.5" />
-                                        <span>맞춤 컨설팅</span>
+                                        <span>최적화 작업 제외</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-gray-600">
+                                        <Check className="h-4 w-4 text-deep-navy shrink-0 mt-0.5" />
+                                        <span>가게 문제점 정밀 파악</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-gray-600">
+                                        <Check className="h-4 w-4 text-deep-navy shrink-0 mt-0.5" />
+                                        <span>1회성 정밀 진단 레포트</span>
                                     </li>
                                 </ul>
 
