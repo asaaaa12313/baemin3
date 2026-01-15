@@ -31,6 +31,7 @@ export function Solution() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
+                        whileHover={{ scale: 1.05, zIndex: 10 }}
                         className="h-full"
                     >
                         <TiltCard className="h-full">
@@ -75,6 +76,7 @@ export function Solution() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
+                        whileHover={{ scale: 1.1, zIndex: 20 }}
                         className="h-full z-10"
                     >
                         <TiltCard className="h-full">
@@ -127,6 +129,7 @@ export function Solution() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.6 }}
+                        whileHover={{ scale: 1.05, zIndex: 10 }}
                         className="h-full"
                     >
                         <TiltCard className="h-full">
