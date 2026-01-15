@@ -34,6 +34,11 @@ export function ServiceDetail() {
         "/images/banner1.jpg", "/images/banner2.jpg"
     ];
 
+    const bannerImages = [
+        "/images/banner1.jpg",
+        "/images/banner2.jpg"
+    ];
+
     return (
         <section className="py-24 bg-white px-4">
             <div className="mx-auto max-w-5xl">
@@ -97,6 +102,20 @@ export function ServiceDetail() {
                                                 ))}
                                             </motion.div>
                                         </div>
+                                    </div>
+                                )}
+
+                                {index === 3 && (
+                                    <div className="flex gap-3 mt-4 overflow-x-auto pb-2">
+                                        {bannerImages.map((src, i) => (
+                                            <div key={i} className="relative w-full h-[150px] md:h-[200px] flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
+                                                <img
+                                                    src={src}
+                                                    alt={`Banner Sample ${i}`}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </div>
+                                        ))}
                                     </div>
                                 )}
                             </Card>
