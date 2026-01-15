@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Solution } from "@/components/sections/Solution";
 import { Upsell } from "@/components/sections/Upsell";
 import { Addons } from "@/components/sections/Addons";
+import { Portfolio } from "@/components/sections/Portfolio";
 import { Evidence } from "@/components/sections/Evidence";
 import { Footer } from "@/components/sections/Footer";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <Solution />
       <Addons />
+      <Portfolio />
       <Upsell />
       <Evidence />
       <Footer />
