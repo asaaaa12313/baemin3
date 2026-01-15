@@ -7,7 +7,7 @@ import { TiltCard } from '@/components/ui/motion/TiltCard';
 
 export function Solution() {
     return (
-        <section className="py-24 bg-gray-50 px-4 md:px-8">
+        <section id="pricing" className="py-24 bg-gray-50 px-4 md:px-8">
             <div className="mx-auto max-w-7xl text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
