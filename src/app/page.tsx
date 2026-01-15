@@ -14,8 +14,8 @@ export default function Home() {
       <Header />
       <Hero />
       <Solution />
-      <Upsell />
       <Addons />
+      <Upsell />
       <Evidence />
       <Footer />
     </main>

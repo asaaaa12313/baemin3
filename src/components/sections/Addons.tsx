@@ -13,7 +13,7 @@ export function Addons() {
                     viewport={{ once: true }}
                     className="mb-12 text-2xl font-bold text-center text-deep-navy md:text-3xl"
                 >
-                    필요한 것만 골라 담으세요 (Add-ons)
+                    필요한 것만 골라 담으세요
                 </motion.h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
